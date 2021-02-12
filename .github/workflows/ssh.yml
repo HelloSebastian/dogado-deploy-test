@@ -32,7 +32,7 @@ jobs:
       run: ls -l
 
     - name: zip files
-      run: zip -r temp.zip . -x ".git/*" ".github/*" ".node_modules/*"
+      run: zip -r temp.zip . -x ".git/*" ".github/*" "node_modules/*"
 
     - name: ls
       run: ls -l
