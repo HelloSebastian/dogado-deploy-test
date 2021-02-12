@@ -36,3 +36,13 @@ jobs:
 
     - name: ls
       run: ls -l
+
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PASSWORD }}
+        port: 21
+        source: "temp.zip"
+        target: "/temp.zip"
