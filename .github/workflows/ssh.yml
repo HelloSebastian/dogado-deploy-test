@@ -45,4 +45,4 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD }}
         port: 21
         source: "temp.zip"
-        target: "/temp.zip"
+        target: "temp.zip"
