@@ -24,12 +24,12 @@ jobs:
       with:
         node-version: '12'
         check-latest: true
-      
-    - name: check node node-version
-      run: node -v
 
     - name: install Yarn
       run: yarn install
+
+    - name: build yarn
+      run: yarn encore production
       
     - name: ls
       run: ls -l
