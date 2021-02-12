@@ -48,4 +48,4 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         password: ${{ secrets.SSH_PASSWORD }}
         port: 22
-        script: unzip -o "/var/www/vhosts/h94840.web147.dogado.net/websites/kunden/amb/neues-system/backup/amb.zip "-d /var/www/vhosts/h94840.web147.dogado.net/websites/kunden/amb/neues-system/github-deploy
+        script: unzip -o "/var/www/vhosts/h94840.web147.dogado.net/websites/kunden/amb/neues-system/backup/amb.zip" -d "/var/www/vhosts/h94840.web147.dogado.net/websites/kunden/amb/neues-system/github-deploy"
