@@ -35,9 +35,9 @@ jobs:
       
     - name: Use Yarn
       uses: borales/actions-yarn@v2.0.0
+      with:
+          cmd: dogado-prod
       
-    - name: encore build
-      run: yarn dogado-prod
 
     - name: ls
       run: ls -l
