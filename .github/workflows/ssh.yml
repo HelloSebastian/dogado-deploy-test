@@ -14,17 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v2
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
-
     - name: Install dependencies
-      if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
     
     - name: ls
@@ -35,15 +25,11 @@ jobs:
         node-version: '12'
         check-latest: true
       
-    - name: install Yarn
-      uses: borales/actions-yarn@v2.0.0
-      with:
-          cmd: install
+    - name: check node node-version
+      run: node -v
 
-    - name: build Yarn
-      uses: borales/actions-yarn@v2.0.0
-      with:
-          cmd: encore production
+    - name: install Yarn
+      run: yarn install
       
     - name: ls
       run: ls -l
