@@ -30,12 +30,16 @@ jobs:
     - name: ls
       run: ls -l
       
-    - name: Use Yarn
+    - name: install Yarn
       uses: borales/actions-yarn@v2.0.0
       with:
-          cmd: dogado-prod
-      
+          cmd: install
 
+    - name: build Yarn
+      uses: borales/actions-yarn@v2.0.0
+      with:
+          cmd: encore production
+      
     - name: ls
       run: ls -l
       
