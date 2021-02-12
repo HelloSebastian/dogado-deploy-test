@@ -1,7 +1,8 @@
 {
     "type": "project",
+    "name": "test",
+    "description": "da hast du"
     "license": "proprietary",
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": ">=7.2.5",
