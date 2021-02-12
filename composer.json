@@ -1,7 +1,7 @@
 {
     "type": "project",
     "name": "test",
-    "description": "da hast du"
+    "description": "da hast du",
     "license": "proprietary",
     "prefer-stable": true,
     "require": {
