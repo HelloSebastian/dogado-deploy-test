@@ -29,6 +29,11 @@ jobs:
     
     - name: ls
       run: ls -l
+
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '12'
+        check-latest: true
       
     - name: install Yarn
       uses: borales/actions-yarn@v2.0.0
