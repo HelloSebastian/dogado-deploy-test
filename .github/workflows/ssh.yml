@@ -51,4 +51,4 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         password: ${{ secrets.SSH_PASSWORD }}
         port: 22
-        script: unzip temp/temp.zip temp
+        script: unzip temp/temp.zip -d temp
